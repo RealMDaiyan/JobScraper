@@ -28,7 +28,7 @@ class Scraper:
             description = job.find('div', className="description").text.strip()
             job_list.append([title, company, location, description])
         return job_list
-    def parse(self):
+    def scrape(self):
         jobs = []
         for page in range(1, self.pages + 1):
             url = f"{self.url}?page={page}"
